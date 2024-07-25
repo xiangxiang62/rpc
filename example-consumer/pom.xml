@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.coderxiang</groupId>
-            <artifactId>xiang-rpc-easy</artifactId>
+            <artifactId>xiang-rpc-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

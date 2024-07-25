@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="xiang-rpc-easy" />
         <module name="example-provider" />
+        <module name="xiang-rpc-core" />
         <module name="example-consumer" />
         <module name="example-common" />
       </profile>
