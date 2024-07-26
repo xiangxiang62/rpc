@@ -1,8 +1,8 @@
 package com.xiang.example.consumer;
 
-import cn.hutool.json.JSONUtil;
+import com.xiang.example.common.service.UserService;
 import com.xiang.xiangrpc.config.RpcConfig;
-import com.xiang.xiangrpc.constant.RpcConstant;
+import com.xiang.xiangrpc.proxy.ServiceProxyFactory;
 import com.xiang.xiangrpc.utils.ConfigUtils;
 
 /**
@@ -17,6 +17,8 @@ public class ConsumerExample {
         RpcConfig rpc = ConfigUtils.loadConfig(RpcConfig.class,"rpc");
         System.out.println(rpc);
 
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
+        System.out.println(userService.getNumber());
     }
 
 }
