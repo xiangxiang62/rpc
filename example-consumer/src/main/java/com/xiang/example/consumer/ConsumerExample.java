@@ -1,5 +1,6 @@
 package com.xiang.example.consumer;
 
+import com.xiang.example.common.model.User;
 import com.xiang.example.common.service.UserService;
 import com.xiang.xiangrpc.config.RpcConfig;
 import com.xiang.xiangrpc.proxy.ServiceProxyFactory;
@@ -18,7 +19,11 @@ public class ConsumerExample {
         System.out.println(rpc);
 
         UserService userService = ServiceProxyFactory.getProxy(UserService.class);
-        System.out.println(userService.getNumber());
+        User user = new User();
+        user.setName("xiangxiang");
+        User user1 = userService.getUser(user);
+        System.out.println(user1.getName());
+//        System.out.println(userService.getNumber());
     }
 
 }

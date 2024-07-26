@@ -1,5 +1,6 @@
 package com.xiang.xiangrpc.config;
 
+import com.xiang.xiangrpc.serializer.SerializerKeys;
 import lombok.Data;
 
 /**
@@ -37,5 +38,10 @@ public class RpcConfig {
      * 是否开启 mock
      */
     private boolean mock = false;
+
+    /**
+     * 序列化器
+     */
+    private String serializer = SerializerKeys.JDK;
 
 }
